@@ -4,7 +4,7 @@
     "pages/logs/main"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ea4451",
     "navigationBarTitleText": "优购",
     "navigationBarTextStyle": "white"
