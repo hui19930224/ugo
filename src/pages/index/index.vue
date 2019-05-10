@@ -1,13 +1,7 @@
 <template>
   <div class="m_body">
-    <!-- 头部区域 -->
-    <div class="header">
-      <div class="input">
-        <input type="text"
-               placeholder="搜索">
-      </div>
-      <div class="result"></div>
-    </div>
+    <!-- 搜索框组件 -->
+    <search></search>
     <!-- 中心广告区 -->
     <div class="banner">
       <swiper indicator-dots
@@ -63,6 +57,7 @@
 
 <script>
 import request from '@/utils/request'
+import search from '@/components/search'
 export default {
   data () {
     return {
@@ -71,6 +66,9 @@ export default {
       floorList: [],
       isTop: true
     }
+  },
+  components: {
+    search
   },
   methods: {
     async getPic () {
@@ -116,7 +114,7 @@ export default {
 
     goTop () {
       mpvue.pageScrollTo({
-        scrollTop: 0
+        scrollTop: 10
       })
     }
 
@@ -144,26 +142,6 @@ export default {
 <style scoped lang="less">
 .m_body {
   width: 100%;
-  // 头部区域
-  .header {
-    width: 100%;
-    background-color: #ea4451;
-    .input {
-      width: 100%;
-      padding: 20rpx 16rpx;
-      box-sizing: border-box;
-      input {
-        background-color: #fff;
-        height: 60rpx;
-        font-size: 24rpx;
-        width: 100%;
-        padding-left: 20rpx;
-        box-sizing: border-box;
-        border-radius: 8rpx;
-      }
-    }
-  }
-
   // 广告区域
   .banner {
     width: 100%;
