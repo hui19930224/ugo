@@ -24,6 +24,13 @@ export default {
     width: 100%;
     padding: 20rpx 16rpx;
     box-sizing: border-box;
+    // &::after {
+    //   content: "";
+    //   display: block;
+    //   height: 24rpx;
+    //   width: 60rpx;
+    //   background: pink;
+    // }
     input {
       background-color: #fff;
       height: 60rpx;
